@@ -1,3 +1,3 @@
 {
-    "plugins": ["highlight", "code-highlighter"],
+    "plugins": ["highlight", "code-highlighter"]
 }
