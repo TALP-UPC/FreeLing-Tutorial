@@ -5,7 +5,7 @@
   Whenever FreeLing finds one or more whole sentences, we will process them.
   Whole sentences will be detected when the last read line either contained whole sentences, or it contained a partial sentence that satisfactorily completed a sentence started in previou(s) line(s).
 
- This example is based on [*Example 4*](./example04.md), and produces the same output (SVO triples).
+ This example is based on [*Example 4*](example04.md), and produces the same output (SVO triples).
 
  The difference is that instead of loading the whole input text and then processing it afterwards, we will read it line by line as long as they keep coming. We will not wait for the input to end, but we will process sentences as soon as they are complete (even if they are split in several lines).
 
@@ -98,6 +98,6 @@ Then, we just need to analyze and process the sentence (if any) as usual.
 ### Code
 
 Find here the whole code:
-  - In [C++](./code/example08.cc.md)
-  - In [python](./code/example08.py.md)
+  - In [C++](code/example08.cc.md)
+  - In [python](code/example08.py.md)
 

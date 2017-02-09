@@ -1,11 +1,11 @@
 
 ## Example 05: Better Triples Using the Semantic Role Labeller
 
-In [*Example 4*](./example04.md) we saw an easy way to extract SVO triples, but we also saw that some sentences, such as passive sentences or compound verb tenses, have a different tree structure which would require programming more specific patterns.
+In [*Example 4*](example04.md) we saw an easy way to extract SVO triples, but we also saw that some sentences, such as passive sentences or compound verb tenses, have a different tree structure which would require programming more specific patterns.
 
 In this example, we'll see how a semantic role labeller can save us the work, since it will identify the arguments of a verb, regardless of the surface syntactic structure or verb tense.
 
-The code will be the same than we used in [*Example 4*](./example04.md), since the dependency parser we used there not only produces dependency trees but also performs SRL.
+The code will be the same than we used in [*Example 4*](example04.md), since the dependency parser we used there not only produces dependency trees but also performs SRL.
 
 So, after running the parser, sentences contain not also the dependency tree we used before, but also a list of predicates with their arguments. 
 To extract the triplets we will modify  our `ProcessSentence` function to combine the information in the tree with the information in the predicate list.
@@ -67,8 +67,8 @@ void ProcessSentences(const list<freeling::sentence> &ls) {
 ### Code
 
 Find here the whole code:
- - In [C++](./code/example05.cc.md)
- - In [python](./code/example05.py.md)
+ - In [C++](code/example05.cc.md)
+ - In [python](code/example05.py.md)
 
 
 ### Example

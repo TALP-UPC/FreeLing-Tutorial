@@ -7,7 +7,7 @@ The `compounds` module builds a FSM that recognizes the language `L(_L)+`, being
 
 FOMA includes also a very fast approximate search algorithm that can return the word in the FSM language closer to the input string. This is used by the `alternatives` module to return a list of candidate words for a string that was not found in the dictionary.
 
-We are going to use [*Example 09*](./example09.md) as a starting point.
+We are going to use [*Example 9*](example09.md) as a starting point.
 
 First, we will modify configuration and invocation options for our `analyzer` to have it perform only morphological analysis, setting `MACO_ProbabilityAssignment = false`. This will deactivate the guesser and thus, unknown words will have no analysis, which will trigger the `alternatives` modules to take action on these words. (Note that this is the default behaviour of `alternatives`, but it can be changed via its configuration file and have it act on all words, only on words with certain PoS, etc...)
 
@@ -151,8 +151,8 @@ for (list<freeling::sentence>::iterator s=ls.begin(); s!=ls.end(); s++) {
 ### Code
 
 Find here the whole code:
-  - In [C++](./code/example12.cc.md)
-  - In [python](./code/example12.py.md)
+  - In [C++](code/example12.cc.md)
+  - In [python](code/example12.py.md)
 
 
 ### Example

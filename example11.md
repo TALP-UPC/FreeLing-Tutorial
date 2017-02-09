@@ -8,14 +8,14 @@ However, many applications need to be able to dump and load results of FreeLing 
 In this example, we will see how to use the class `output_conll` to dump FreeLing analysis into a column format similar to that of CoNLL shared tasks.
 This module has the advantatge of being configurable, so we can decide which columns and in which order the output is going to consist of.
 
-We are going to use [*Example 09*](./example09.md) as a starting point, and simply remove the `ProcessSentences` function and call the output handler to print the analysis instead. 
+We are going to use [*Example 9*](example09.md) as a starting point, and simply remove the `ProcessSentences` function and call the output handler to print the analysis instead. 
 
 First, make sure to include the output handler classes:
 ```C++
 #include "freeling/output/output_conll.h"
 ```
 
-And in [*Example 09*](./example09.md), remove function `ProcessSentences`, and instead of calling it after the analysis are completed, use the code:
+And in [*Example 9*](example09.md), remove function `ProcessSentences`, and instead of calling it after the analysis are completed, use the code:
 ```C++
 // Create output handler and select desired output
 freeling::io::output_conll out(L"out.cfg");
@@ -29,8 +29,8 @@ That will create the output handler instance, and call it to print the results o
 ### Code
 
 Find here the whole code:
-  - In [C++](./code/example11.cc.md)
-  - In [python](./code/example11.py.md)
+  - In [C++](code/example11.cc.md)
+  - In [python](code/example11.py.md)
 
 
 ### Example

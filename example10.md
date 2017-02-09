@@ -5,7 +5,7 @@ This example shows how to use the language identifier module to find out the lan
 
 This could be a first step in a multilingual processing chain: Get some text, find out the language, and then run it through the analyzer instances created with the appropriate data for that language.
 
-The initial steps are basically the same than in all other examples (see [*Example 1*](./example01.md) for details)
+The initial steps are basically the same than in all other examples (see [*Example 1*](example01.md) for details)
 
 Do not forget to include FreeLing headers:
 ```C++
@@ -73,8 +73,8 @@ The result of the identifier is ranked by perplexity, which is a common informat
 ### Code
 
 Find here the whole code:
-  - In [C++](./code/example10.cc.md)
-  - In [python](./code/example10.py.md)
+  - In [C++](code/example10.cc.md)
+  - In [python](code/example10.py.md)
 
 
 ### Example

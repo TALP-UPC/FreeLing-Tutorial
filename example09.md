@@ -5,7 +5,7 @@ This example shows how to use `analyzer` meta-module to create a single instance
 
 The drawback is that configuration for the meta-module needs to contain information about configuration of each module that it contains. For this reason, there are two additional classes that will hold the needed configuration options.
 
-We will write a program that performs syntactic parsing, as the example presented in [*Example 05*](./example05.md), but instead of calling every module, we will use a single instance of `analyzer` meta-module.
+We will write a program that performs syntactic parsing, as the example presented in [*Example 05*](example05.md), but instead of calling every module, we will use a single instance of `analyzer` meta-module.
 
 For that, we need to fill the required configuration options, and use them to create an instace of `analyzer`.
 ```C++
@@ -43,7 +43,7 @@ anlz.analyze(text,ls);
 ProcessSentences(ls);
 ```
 
-If we use the `ProcessSentences` function from [*Example 05*](./example05.md), we will get the same results with a much shorter code.
+If we use the `ProcessSentences` function from [*Example 05*](example05.md), we will get the same results with a much shorter code.
 
 
 All we need to complete the program are the functions `fill_config` and `fill_invoke` that will set the needed options.
@@ -156,6 +156,6 @@ freeling::analyzer::invoke_options fill_invoke() {
 ### Code
 
 Find here the whole code:
-  - In [C++](./code/example09.cc.md)
-  - In [python](./code/example09.py.md)
+  - In [C++](code/example09.cc.md)
+  - In [python](code/example09.py.md)
 

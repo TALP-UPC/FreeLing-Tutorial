@@ -1,12 +1,12 @@
 
 ## Example 07: Extracting Triples with Semantic Information
 
-In [*Example 5*](./example05.md) we saw how to use the output of a dependency parser and SRL to extract SVO triples. 
-Now we are going to generalize these triples using ontological information extracted from the `semanticDB` class presented in [*Example 6*](./example06.md).
+In [*Example 5*](example05.md) we saw how to use the output of a dependency parser and SRL to extract SVO triples. 
+Now we are going to generalize these triples using ontological information extracted from the `semanticDB` class presented in [*Example 6*](example06.md).
 
 We are going to access WordNet with the synset chosen by the WSD module, and retrieve all synonyms for each word, plus the code of the equivalent concept in [SUMO](http://www.adampease.org/OP/) ontology.
 
-We only need to modify the `ProcessSentence` function in [*Example 5*](./example05.md) to output these additional information for each element of extracted triples. The only changes are in the last part, when a triple is found and output.
+We only need to modify the `ProcessSentence` function in [*Example 5*](example05.md) to output these additional information for each element of extracted triples. The only changes are in the last part, when a triple is found and output.
 
 ```C++
 void ProcessSentences(const list<freeling::sentence> &ls, const freeling::semanticDB &sdb) {
@@ -78,8 +78,8 @@ void ProcessSentences(const list<freeling::sentence> &ls, const freeling::semant
 ### Code
 
 Find here the whole code:
- - In [C++](./code/example07.cc.md)
- - In [python](./code/example07.py.md)
+ - In [C++](code/example07.cc.md)
+ - In [python](code/example07.py.md)
 
 
 ### Example

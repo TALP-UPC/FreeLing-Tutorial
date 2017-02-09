@@ -1,7 +1,7 @@
 
 ## Example 06: Navigating WordNet
 
-This example is an extension of [*Example 3*](./example03.md) but that not merely outputs the synsets proposed by the WSD, but uses them as starting points to navigate WordNet using FreeLing classes. 
+This example is an extension of [*Example 3*](example03.md) but that not merely outputs the synsets proposed by the WSD, but uses them as starting points to navigate WordNet using FreeLing classes. 
 This is done using the class `semanticDB` to obtain additional semantic information and to navigate WordNet.
 
 In particular, we are going to detect which words in the text refer to animals.
@@ -65,8 +65,8 @@ ProcessSentences(ls, sdb);
 ### Code
 
 Find here the whole code:
- - In [C++](./code/example06.cc.md)
- - In [python](./code/example06.py.md)
+ - In [C++](code/example06.cc.md)
+ - In [python](code/example06.py.md)
 
 
 ### Example

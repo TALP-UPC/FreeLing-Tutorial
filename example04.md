@@ -3,7 +3,7 @@
 
 In this example, we will use the parser to obtain a syntactic analysis of each sentece, and then process the obtained trees to detect some relevant patterns, such as Subject-verb-object triples describing who did what to who.
 
-We will use code from [*Example 3*](./example03.md) as a starting point, and add code to create a parser instance.
+We will use code from [*Example 3*](example03.md) as a starting point, and add code to create a parser instance.
 
 ```C++
 // Create dependency parser & SRL
@@ -72,8 +72,8 @@ void extract_lemma_and_sense(const freeling::word &w, wstring &lem, wstring &sen
 ### Code
 
 Find here the whole code:
- - In [C++](./code/example04.cc.md)
- - In [python](./code/example04.py.md)
+ - In [C++](code/example04.cc.md)
+ - In [python](code/example04.py.md)
 
 
 ### Example
@@ -99,7 +99,7 @@ SVO : (pred:    chase [02001858-v]
 
 - We can see that the SVO triples for the first two sentences were correctly extracted, but not the triples for the last two sentences.
     The reason is that these sentences have either a compound verb tense (*is eating*) or a passive construction, which have different tree structures than active present tense sentences. Since our program looks only for a particular structure, it didn't find the triples for those cases.
-    In [*Example 5*](./example05.md) we will see how this can be overcome using a Semantic Role Labeller. 
+    In [*Example 5*](example05.md) we will see how this can be overcome using a Semantic Role Labeller. 
 
 - Finally, note that the code looks for nodes in the tree with syntactic function `SBJ` and `OBJ`, which are the labels used by the English parser. If you want to use this program for a different language, you may need to change these labels to the appropriate ones.
 
