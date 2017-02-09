@@ -4,10 +4,10 @@
 Now we will continue extending our example program with additional features. In this exercise, we are going to use a sense annotator to associate to each word its possible WordNet synsets, and a word sense disambiguator to select the right meaning among all possible senses for each word.
 
 Then, as post processing we will just print out the possible and selected synsets for each word.
-As in [*Example 1*](./example01.md), this is simply the output of a WSD system, and we could use one out-of-the-box for that. 
+As in [*Example 1*](example01.md), this is simply the output of a WSD system, and we could use one out-of-the-box for that. 
 In later examples we'll see how we can further exploit the output of the semantic disambiguator.
 
-We will use [*Example 1*](./example01.md) as a strating point and instantiate two new modules in the module creation area of our program:
+We will use [*Example 1*](example01.md) as a strating point and instantiate two new modules in the module creation area of our program:
 ```C++
 // create sense annotator
 freeling::senses sen(lpath+L"senses.dat");
@@ -54,8 +54,8 @@ void ProcessSentences(const list<freeling::sentence> &ls) {
 ### Code
 
 Find here the whole code:
- - In [C++](./code/example03.cc.md)
- - In [python](./code/example03.py.md)
+ - In [C++](code/example03.cc.md)
+ - In [python](code/example03.py.md)
 
 
 ### Example
