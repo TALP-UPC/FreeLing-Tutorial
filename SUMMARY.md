@@ -3,7 +3,7 @@
 * [About this tutorial](README.md)
 * [Preliminaries](preliminaries.md)
 * [Examples](tutorial.md)
-  * [The Basics: Morphology and PoS Tagging](tutorial/the-basics-morphology-and-pos-tagging.md)
+  * The Basics: Morphology and PoS Tagging]
     * [Example 01: PoS tagger](example01.md)
     * [Example 02: Post-processing.](example02.md)
   * Adding Syntax and Semantics
