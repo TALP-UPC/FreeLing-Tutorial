@@ -9,9 +9,9 @@ FreeLing includes a feature extraction module (`fex`) that eases the task of con
 
 In this example we are going to illustrate how to convert a text into a set of features using the `fex` module.
 
-We will use [*Example 09*](./example09.md) as a starting point, and modify the `ProcessSentences` function to perform feature extraction.
+We will use [*Example 9*](example09.md) as a starting point, and modify the `ProcessSentences` function to perform feature extraction.
 
-We are going to use only PoS tagging in this example, so modify the functions `fill_config` and `fill_invoke` to deactivate parsing, and other high level processing, as we did in [*Example 12*](./example12.md).
+We are going to use only PoS tagging in this example, so modify the functions `fill_config` and `fill_invoke` to deactivate parsing, and other high level processing, as we did in [*Example 12*](example12.md).
 
 
 Then, make sure to include the feature extractor classes:
@@ -59,8 +59,8 @@ void ProcessSentences(list<freeling::sentence> &ls, const wstring &fname) {
 ### Code
 
 Find here the whole code:
-  - In [C++](./code/example14.cc.md)
-  - In [python](./code/example14.py.md)
+  - In [C++](code/example14.cc.md)
+  - In [python](code/example14.py.md)
 
 
 ### Example
