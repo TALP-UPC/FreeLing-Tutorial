@@ -1,10 +1,3 @@
-## 1. The Basics: Morphology and PoS Tagging
-
-This section introduces the basic FreeLing processing modules, and how to handle the data structure they return.
-
-* [Example 01: PoS tagger](example01.md)
-* [Example 02: Post-processing](example02.md).
-
 ## 2. Adding Syntax and Semantics
 
 In this section, we will extend the basic examples seen so far with the use of a word sense disambiguation module and a syntactic parser, and we will illustrate how to traverse the enriched data structure.
