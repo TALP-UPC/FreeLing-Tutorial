@@ -24,7 +24,7 @@
     * [Example 13: Tagset Manipulation](example13.md)
     * [Example 14: Using the Feature Extractor](example14.md)
 * [Code](code.md)
-  * C++
+  * [C++](code/c++.md)
     * [Example 01](code/example01.cc.md)
     * [Example 02](code/example02.cc.md)
     * [Example 03](code/example03.cc.md)
