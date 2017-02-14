@@ -1,4 +1,4 @@
-## 1. The Basics: Morphology and PoS Tagging
+## The Basics: Morphology and PoS Tagging
 
 This section introduces the basic FreeLing processing modules, and how to handle the data structure they return.
 

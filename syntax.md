@@ -1,4 +1,4 @@
-## 2. Adding Syntax and Semantics
+## Adding Syntax and Semantics
 
 In this section, we will extend the basic examples seen so far with the use of a word sense disambiguation module and a syntactic parser, and we will illustrate how to traverse the enriched data structure.
 
