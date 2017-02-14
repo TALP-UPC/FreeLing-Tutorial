@@ -6,11 +6,11 @@
   * [The Basics: Morphology and PoS Tagging](basics.md)
     * [Example 01: PoS tagger](example01.md)
     * [Example 02: Post-processing.](example02.md)
-  * Adding Syntax and Semantics
+  * [Adding Syntax and Semantics](syntax.md)
     * [Example 03: Adding Word Sense Disambiguation](example03.md)
     * [Example 04: Using the Parser to Extract SVO Triples](example04.md)
     * [Example 05: Better Triples Using the Semantic Role Labeller.](example05.md)
-  * Advanced semantics with WordNet
+  * [Advanced semantics with WordNet](semantics.md)
     * [Example 06: Navigating WordNet](example06.md)
     * [Example 07: Extracting Triples with Semantic Information](example07.md)
   * Processing non-ending text
