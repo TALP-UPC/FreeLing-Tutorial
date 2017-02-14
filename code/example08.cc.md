@@ -3,9 +3,8 @@
 #include "freeling.h"
 using namespace std;
 
-//---------------------------------------------
+/////////////////////////////////////////////////
 // Do whatever is needed with analyzed sentences
-//---------------------------------------------
 
 void ProcessSentences(const list<freeling::sentence> &ls) {
 
@@ -44,9 +43,8 @@ void ProcessSentences(const list<freeling::sentence> &ls) {
   }
 }
 
-//---------------------------------------------
+/////////////////////////////////////////////////
 // Set desired options for morphological analyzer
-//---------------------------------------------
 
 freeling::maco_options my_maco_options (const wstring &lang, const wstring &lpath) {
   // create options holder 
@@ -61,7 +59,9 @@ freeling::maco_options my_maco_options (const wstring &lang, const wstring &lpat
 }
 
 
-/////////////   MAIN PROGRAM  /////////////////////
+/////////////////////////////////////////////////
+/////////////   MAIN PROGRAM  ///////////////////
+/////////////////////////////////////////////////
 
 int main (int argc, char **argv) {
 
