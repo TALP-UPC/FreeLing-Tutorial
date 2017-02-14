@@ -144,5 +144,4 @@ int main (int argc, char **argv) {
   wsd.analyze(ls);
   ProcessSentences(ls); 
 }
-
 ```
