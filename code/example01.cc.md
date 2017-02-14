@@ -1,4 +1,4 @@
-```c++
+```C++
 #include <iostream>
 #include "freeling.h"
 using namespace std;
