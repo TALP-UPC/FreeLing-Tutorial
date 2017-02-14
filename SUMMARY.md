@@ -2,7 +2,7 @@
 
 * [About this tutorial](README.md)
 * [Preliminaries](preliminaries.md)
-* [Examples](tutorial.md)
+* Examples
   * [The Basics: Morphology and PoS Tagging](basics.md)
     * [Example 01: PoS tagger](example01.md)
     * [Example 02: Post-processing.](example02.md)
@@ -13,11 +13,11 @@
   * [Advanced semantics with WordNet](semantics.md)
     * [Example 06: Navigating WordNet](example06.md)
     * [Example 07: Extracting Triples with Semantic Information](example07.md)
-  * Processing non-ending text
+  * [Processing non-ending text](nonending.md)
     * [Example 08: SVO Triple extractor on non-ending text](example08.md)
-  * Creating custom pipelines
+  * [Creating custom pipelines](custom.md)
     * [Example 09: Simpler code with analyzer meta-module](example09.md)
-  * Other Useful Modules
+  * [Other Useful Modules](other.md)
     * [Example 10: Language Identifier](example10.md)
     * [Example 11: Input/Output formats](example11.md)
     * [Example 12: Candidate Corrections for Mispelled Words](example12.md)
