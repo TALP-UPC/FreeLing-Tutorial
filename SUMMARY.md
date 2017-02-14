@@ -3,7 +3,7 @@
 * [About this tutorial](README.md)
 * [Preliminaries](preliminaries.md)
 * [Examples](tutorial.md)
-  * The Basics: Morphology and PoS Tagging]
+  * [The Basics: Morphology and PoS Tagging\]](tutorial/the-basics-morphology-and-pos-tagging.md)
     * [Example 01: PoS tagger](example01.md)
     * [Example 02: Post-processing.](example02.md)
   * Adding Syntax and Semantics
@@ -23,7 +23,7 @@
     * [Example 12: Candidate Corrections for Mispelled Words](example12.md)
     * [Example 13: Tagset Manipulation](example13.md)
     * [Example 14: Using the Feature Extractor](example14.md)
-* Code
+* [Code](code.md)
   * C++
     * [Example 01](code/example01.cc.md)
     * [Example 02](code/example02.cc.md)
