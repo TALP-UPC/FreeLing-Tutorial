@@ -106,8 +106,8 @@ int main (int argc, char **argv) {
   freeling::splitter sp(lpath+L"splitter.dat");
 
   // create the analyzer with the required set of maco_options
-  freeling::maco_options opt = my_maco_options(lang,lpath)
-  freeling::maco morfo(opt);  // then, (de)activate required modules
+  freeling::maco_options opt = my_maco_options(lang,lpath);
+  freeling::maco morfo(opt);
 
   // then, (de)activate required modules
   morfo.set_active_options (false,  // UserMap
