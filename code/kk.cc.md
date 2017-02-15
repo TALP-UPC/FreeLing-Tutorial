@@ -171,6 +171,15 @@ int main (int argc, char **argv) {
 
   // set locale to an UTF8 compatible locale 
   freeling::util::init_locale(L"default");
+  
+  // get requested language from arg1, or English if not provided
+  wstring lang = L"en";
+  if (argc > 1) lang = freeling::util::string2wstring(argv[1]);
+  // get installation path to use from arg2, or use /usr/local if not provided
+  wstring ipath = L"/usr/local";
+  if (argc > 2) ipath = freeling::util::string2wstring(argv[2]);
 
+  // path to language data
+  wstring lpath = ipath+L"/share/freeling/"+lang+L"/";
 }
 ```
