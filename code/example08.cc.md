@@ -84,7 +84,7 @@ int main (int argc, char **argv) {
   freeling::splitter::session_id sid=sp.open_session();
 
   // create the analyzer with the required set of maco_options
-  freeling::maco_options opt(lang,lpath)
+  freeling::maco_options opt = my_maco_options(lang,lpath)
   freeling::maco morfo(opt); 
   // then, (de)activate required modules
   morfo.set_active_options (false,  // UserMap
