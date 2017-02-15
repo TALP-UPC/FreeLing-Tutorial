@@ -190,18 +190,7 @@ int main (int argc, char **argv) {
   // create the analyzer with the required set of maco_options
   freeling::maco morfo(my_maco_options(lang,lpath));
   // then, (de)activate required modules
-  morfo.set_active_options (false, // UserMap
-                           true, // NumbersDetection,
-                           true, // PunctuationDetection,
-                           true, // DatesDetection,
-                           true, // DictionarySearch,
-                           true, // AffixAnalysis,
-                           false, // CompoundAnalysis,
-                           true, // RetokContractions,
-                           true, // MultiwordsDetection,
-                           true, // NERecognition,
-                           false, // QuantitiesDetection,
-                          true); // ProbabilityAssignment
+  morfo.set_active_options (false) // Userma
 
   // create a hmm tagger for spanish (with retokenization ability, and forced 
   // to choose only one tag per word)
