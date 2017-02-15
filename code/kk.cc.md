@@ -181,5 +181,31 @@ int main (int argc, char **argv) {
 
   // path to language data
   wstring lpath = ipath+L"/share/freeling/"+lang+L"/";
+  
+  // create analyzers
+  freeling::tokenizer tk(lpath+L"tokenizer.dat");
+  freeling::splitter sp(lpath+L"splitter.dat");
+  freeling::splitter::session_id sid=sp.open_session();
+
+  // create the analyzer with the required set of maco_options
+  freeling::maco morfo(my_maco_options(lang,lpath));
+  // then, (de)activate required modules
+  morfo.set_active_options (false, // UserMap
+                           true, // NumbersDetection,
+                           true, // PunctuationDetection,
+                           true, // DatesDetection,
+                           true, // DictionarySearch,
+                           true, // AffixAnalysis,
+                           false, // CompoundAnalysis,
+                           true, // RetokContractions,
+                           true, // MultiwordsDetection,
+                           true, // NERecognition,
+                           false, // QuantitiesDetection,
+                          true); // ProbabilityAssignment
+
+  // create a hmm tagger for spanish (with retokenization ability, and forced 
+  // to choose only one tag per word)
+  freeling::hmm_tagger tagger(lpath+L"tagger.dat", true, FORCE_TAGGER);
+
 }
 ```
