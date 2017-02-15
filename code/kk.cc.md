@@ -165,11 +165,11 @@ void ProcessSentences(const list<freeling::sentence> &ls) {
   }
 }
 
-/////////////   MAIN PROGRAM  ///////////////////
+/////////////   MAIN PROGRAM  /////////////////////
 
 int main (int argc, char **argv) {
 
-  // set locale to an UTF8 compatible locale
+  // set locale to an UTF8 compatible locale 
   freeling::util::init_locale(L"default");
 
   // get requested language from arg1, or English if not provided
@@ -179,73 +179,26 @@ int main (int argc, char **argv) {
   wstring ipath = L"/usr/local";
   if (argc > 2) ipath = freeling::util::string2wstring(argv[2]);
 
-  // path to language data
-  wstring lpath = ipath+L"/share/freeling/"+lang+L"/";
+  // set config options (which modules to create, with which configuration)
+  freeling::analyzer::config_options cfg = fill_config(lang, ipath);
+  // create analyzer
+  freeling::analyzer anlz(cfg);
 
-  // create analyzers
-  freeling::tokenizer tk(lpath+L"tokenizer.dat"); 
-  freeling::splitter sp(lpath+L"splitter.dat");
-  freeling::splitter::session_id sid=sp.open_session();
+  // set invoke options (which modules to use. Can be changed in run time)
+  freeling::analyzer::invoke_options ivk = fill_invoke();
+  // load invoke options into analyzer
+  anlz.set_current_invoke_options(ivk);
 
-  // create the analyzer with the required set of maco_options
-  freeling::maco morfo(my_maco_options(lang,lpath)); 
-  // then, (de)activate required modules
-  morfo.set_active_options (false,  // UserMap
-                            true,  // NumbersDetection,
-                            true,  // PunctuationDetection,
-                            true,  // DatesDetection,
-                            true,  // DictionarySearch,
-                            true,  // AffixAnalysis,
-                            false, // CompoundAnalysis,
-                            true,  // RetokContractions,
-                            true,  // MultiwordsDetection,
-                            true,  // NERecognition,
-                            false, // QuantitiesDetection,
-                            true); // ProbabilityAssignment
+  // load document to analyze
+  wstring text;  
+  wstring line;
+  while (getline(wcin,line)) 
+    text = text + line + L"\n";
 
-  // create a hmm tagger for spanish (with retokenization ability, and forced 
-  // to choose only one tag per word)
-  freeling::hmm_tagger tagger(lpath+L"tagger.dat", true, FORCE_TAGGER);
+  // analyze text, leave result in ls
+  list<freeling::sentence> ls;
+  anlz.analyze(text,ls);
 
-  // create sense annotator
-  freeling::senses sen(lpath+L"senses.dat");
-  // create sense disambiguator
-  freeling::ukb wsd(lpath+L"ukb.dat");
-  // create dependency parser
-  freeling::dep_treeler parser(lpath+L"dep_treeler/dependences.dat");
-
- // get plain text input lines while not EOF.
-  wstring text;
-  while (getline(wcin,text)) {
-
-    // tokenize input line into a list of words
-    list<freeling::word> lw=tk.tokenize(text);
-    
-    // accumulate list of words in splitter buffer, returning a list of sentences.
-    list<freeling::sentence> ls=sp.split(sid, lw, false);
-    
-    // perform and output morphosyntactic analysis and disambiguation
-    morfo.analyze(ls);
-    tagger.analyze(ls);
-    sen.analyze(ls);
-    wsd.analyze(ls);
-    parser.analyze(ls);
- 
-    // do whatever is needed with processed sentences   
-    ProcessSentences(ls);
-  }
-
-  // No more lines to read. Make sure the splitter doesn't retain anything  
-  list<freeling::word> lw; 
-  list<freeling::sentence> ls = sp.split(sid, lw, true);
-  sp.close_session(sid);
- 
-  // analyze and process sentence(s) which might be lingering in the buffer, if any.
-  morfo.analyze(ls);
-  tagger.analyze(ls);
-  parser.analyze(ls);
-  sen.analyze(ls);
-  wsd.analyze(ls);
-  ProcessSentences(ls); 
+  ProcessSentences(ls);
 }
 ```
