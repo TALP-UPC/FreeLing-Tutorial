@@ -185,7 +185,9 @@ int main (int argc, char **argv) {
   // create analyzers
   freeling::tokenizer tk(lpath+L"tokenizer.dat");
   freeling::splitter sp(lpath+L"splitter.dat");
-  freeling::maco morfo(my_maco_options(lang,lpath));
+
   // create the analyzer with the required set of maco_options
+  freeling::maco morfo( my_maco_options(lang,lpath) );
+
 }
 ```
