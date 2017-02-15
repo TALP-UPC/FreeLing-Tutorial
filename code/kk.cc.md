@@ -172,33 +172,5 @@ int main (int argc, char **argv) {
   // set locale to an UTF8 compatible locale 
   freeling::util::init_locale(L"default");
 
-  // get requested language from arg1, or English if not provided
-  wstring lang = L"en";
-  if (argc > 1) lang = freeling::util::string2wstring(argv[1]);
-  // get installation path to use from arg2, or use /usr/local if not provided
-  wstring ipath = L"/usr/local";
-  if (argc > 2) ipath = freeling::util::string2wstring(argv[2]);
-
-  // set config options (which modules to create, with which configuration)
-  freeling::analyzer::config_options cfg = fill_config(lang, ipath);
-  // create analyzer
-  freeling::analyzer anlz(cfg);
-
-  // set invoke options (which modules to use. Can be changed in run time)
-  freeling::analyzer::invoke_options ivk = fill_invoke();
-  // load invoke options into analyzer
-  anlz.set_current_invoke_options(ivk);
-
-  // load document to analyze
-  wstring text;  
-  wstring line;
-  while (getline(wcin,line)) 
-    text = text + line + L"\n";
-
-  // analyze text, leave result in ls
-  list<freeling::sentence> ls;
-  anlz.analyze(text,ls);
-
-  ProcessSentences(ls);
 }
 ```
