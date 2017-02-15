@@ -3,7 +3,6 @@
 * [About this tutorial](README.md)
 * [Preliminaries](preliminaries.md)
 * Examples
-  * [kk](code/kk.cc.md)
   * [The Basics: Morphology and PoS Tagging](basics.md)
     * [Example 01: PoS tagger](example01.md)
     * [Example 02: Post-processing.](example02.md)
