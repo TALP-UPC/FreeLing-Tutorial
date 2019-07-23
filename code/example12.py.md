@@ -1,7 +1,7 @@
 ```python
 #! /usr/bin/python3
 
-import freeling
+import pyfreeling
 import sys
 
 ##---------------------------------------------
@@ -10,7 +10,7 @@ import sys
 
 def fill_config(lang, ipath) :
 
-  cfg = freeling.config_options()
+  cfg = pyfreeling.config_options()
 
   # Language of text to process
   cfg.Lang = lang
@@ -63,11 +63,11 @@ def fill_config(lang, ipath) :
 
 def fill_invoke() :
 
-  ivk = freeling.invoke_options()
+  ivk = pyfreeling.invoke_options()
 
   # Level of analysis in input and output
-  ivk.InputLevel = freeling.TEXT
-  ivk.OutputLevel = freeling.MORFO 
+  ivk.InputLevel = pyfreeling.TEXT
+  ivk.OutputLevel = pyfreeling.MORFO 
   
   # activate/deactivate morphological analyzer modules
   ivk.MACO_UserMap = False
@@ -88,9 +88,9 @@ def fill_invoke() :
   
   # other modules are not used in this example
   ivk.NEC_NEClassification = False 
-  ivk.SENSE_WSD_which = freeling.NO_WSD
-  ivk.TAGGER_which = freeling.NO_TAGGER
-  ivk.DEP_which = freeling.NO_DEP
+  ivk.SENSE_WSD_which = pyfreeling.NO_WSD
+  ivk.TAGGER_which = pyfreeling.NO_TAGGER
+  ivk.DEP_which = pyfreeling.NO_DEP
 
   return ivk
 
@@ -100,7 +100,7 @@ def fill_invoke() :
 ## ----------------------------------------------
 
 # set locale to an UTF8 compatible locale 
-freeling.util_init_locale("default");
+pyfreeling.util_init_locale("default");
 
 # get requested language from arg1, or English if not provided      
 lang = "en"
@@ -116,7 +116,7 @@ lpath = ipath + "/share/freeling/" + lang + "/"
 # set config options (which modules to create, with which configuration)
 cfg = fill_config(lang, ipath)
 # create analyzer
-anlz = freeling.analyzer(cfg)
+anlz = pyfreeling.analyzer(cfg)
 
 # set invoke options (which modules to use. Can be changed in run time)
 ivk = fill_invoke()
@@ -124,9 +124,9 @@ ivk = fill_invoke()
 anlz.set_current_invoke_options(ivk)
 
 # create alternative porposers
-alts_ort = freeling.alternatives(ipath+"/share/freeling/"+lang+"/alternatives-ort.dat")
+alts_ort = pyfreeling.alternatives(ipath+"/share/freeling/"+lang+"/alternatives-ort.dat")
 # comment this out if there is no phonetic encoder for target language
-alts_phon = freeling.alternatives(ipath+"/share/freeling/"+lang+"/alternatives-phon.dat");
+alts_phon = pyfreeling.alternatives(ipath+"/share/freeling/"+lang+"/alternatives-phon.dat");
 
 # load input text
 text = "".join(sys.stdin.readlines())

@@ -1,7 +1,7 @@
 ```python
 #! /usr/bin/python3
 
-import freeling
+import pyfreeling
 import sys
 
 ##---------------------------------------------
@@ -10,7 +10,7 @@ import sys
 
 def fill_config(lang, ipath) :
 
-  cfg = freeling.config_options()
+  cfg = pyfreeling.config_options()
 
   # Language of text to process
   cfg.Lang = lang
@@ -39,7 +39,7 @@ def fill_config(lang, ipath) :
   cfg.UKB_ConfigFile = lpath + "ukb.dat"
   # Tagger options
   cfg.TAGGER_HMMFile = lpath + "tagger.dat"
-  cfg.TAGGER_ForceSelect = freeling.RETOK
+  cfg.TAGGER_ForceSelect = pyfreeling.RETOK
   # Statistical dependency parser & SRL config file
   cfg.DEP_TreelerFile = lpath + "dep_treeler/dependences.dat"   
 
@@ -62,15 +62,15 @@ def fill_config(lang, ipath) :
 
 def fill_invoke() :
 
-  ivk = freeling.invoke_options()
+  ivk = pyfreeling.invoke_options()
 
   # Level of analysis in input and output
-  ivk.InputLevel = freeling.TEXT
+  ivk.InputLevel = pyfreeling.TEXT
   # We can not request higher analysis levels (e.g. coreference) because 
   # we didn't load the needed modules.
   # But we can use this option to lowe the analysis level at will during
   # our application execution.
-  ivk.OutputLevel = freeling.DEP 
+  ivk.OutputLevel = pyfreeling.DEP 
   
   # activate/deactivate morphological analyzer modules
   ivk.MACO_UserMap = False
@@ -86,12 +86,12 @@ def fill_invoke() :
   ivk.MACO_NERecognition = True
   ivk.MACO_RetokContractions = False
     
-  ivk.SENSE_WSD_which = freeling.UKB
-  ivk.TAGGER_which = freeling.HMM
+  ivk.SENSE_WSD_which = pyfreeling.UKB
+  ivk.TAGGER_which = pyfreeling.HMM
 
   # since we only created dep_treeler parser, we can not set the parser to use to another one.
   # If we had loaded both parsers, we could change the used parsed at will with this option
-  ivk.DEP_which = freeling.TREELER
+  ivk.DEP_which = pyfreeling.TREELER
 
   # since we did not load the module, setting this to true would trigger an error.
   # if the module was created, we could activate/deactivate it at will with this option.
@@ -153,7 +153,7 @@ def ProcessSentences(ls) :
 ## ----------------------------------------------
 
 # set locale to an UTF8 compatible locale 
-freeling.util_init_locale("default");
+pyfreeling.util_init_locale("default");
 
 # get requested language from arg1, or English if not provided      
 lang = "en"
@@ -169,7 +169,7 @@ lpath = ipath + "/share/freeling/" + lang + "/"
 # set config options (which modules to create, with which configuration)
 cfg = fill_config(lang, ipath)
 # create analyzer
-anlz = freeling.analyzer(cfg)
+anlz = pyfreeling.analyzer(cfg)
 
 # set invoke options (which modules to use. Can be changed in run time)
 ivk = fill_invoke()

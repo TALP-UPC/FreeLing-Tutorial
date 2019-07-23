@@ -1,7 +1,7 @@
 ```python
 #! /usr/bin/python3
 
-import freeling
+import pyfreeling
 import sys
 
 
@@ -54,7 +54,7 @@ def ProcessSentences(ls):
 def my_maco_options(lang,lpath) :
 
     # create options holder 
-    opt = freeling.maco_options(lang);
+    opt = pyfreeling.maco_options(lang);
 
     # Provide files for morphological submodules. Note that it is not 
     # necessary to set file for modules that will not be used.
@@ -74,7 +74,7 @@ def my_maco_options(lang,lpath) :
 ## ----------------------------------------------
 
 # set locale to an UTF8 compatible locale 
-freeling.util_init_locale("default");
+pyfreeling.util_init_locale("default");
 
 # get requested language from arg1, or English if not provided      
 lang = "en"
@@ -88,11 +88,11 @@ if len(sys.argv)>2 : ipath=sys.argv[2]
 lpath = ipath + "/share/freeling/" + lang + "/"
 
 # create analyzers
-tk=freeling.tokenizer(lpath+"tokenizer.dat");
-sp=freeling.splitter(lpath+"splitter.dat");
+tk=pyfreeling.tokenizer(lpath+"tokenizer.dat");
+sp=pyfreeling.splitter(lpath+"splitter.dat");
 
 # create the analyzer with the required set of maco_options  
-morfo=freeling.maco(my_maco_options(lang,lpath));
+morfo=pyfreeling.maco(my_maco_options(lang,lpath));
 #  then, (de)activate required modules   
 morfo.set_active_options (False,  # UserMap 
                           True,  # NumbersDetection,  
@@ -108,14 +108,14 @@ morfo.set_active_options (False,  # UserMap
                           True); # ProbabilityAssignment                 
 
 # create tagger
-tagger = freeling.hmm_tagger(lpath+"tagger.dat",True,2)
+tagger = pyfreeling.hmm_tagger(lpath+"tagger.dat",True,2)
 
 # create sense annotator
-sen = freeling.senses(lpath+"senses.dat");
+sen = pyfreeling.senses(lpath+"senses.dat");
 # create sense disambiguator
-wsd = freeling.ukb(lpath+"ukb.dat");
+wsd = pyfreeling.ukb(lpath+"ukb.dat");
 # create dependency parser
-parser = freeling.dep_treeler(lpath+"dep_treeler/dependences.dat");
+parser = pyfreeling.dep_treeler(lpath+"dep_treeler/dependences.dat");
 
 # process input text
 text = "".join(sys.stdin.readlines())

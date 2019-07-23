@@ -1,7 +1,7 @@
 ```python
 #! /usr/bin/python3
 
-import freeling
+import pyfreeling
 import sys
 
 
@@ -10,7 +10,7 @@ import sys
 ## ----------------------------------------------
 
 # set locale to an UTF8 compatible locale 
-freeling.util_init_locale("default");
+pyfreeling.util_init_locale("default");
 
 # get installation path to use from arg2, or use /usr/local if not provided
 ipath = "/usr/local";
@@ -23,7 +23,7 @@ fname = sys.argv[1]
 action = sys.argv[2]
 
 # create tagset handling module
-tgs = freeling.tagset(fname);
+tgs = pyfreeling.tagset(fname);
  
 # convert tags to morphosyntactic descriptions
 if action=="tag2msd" :

@@ -1,7 +1,7 @@
 ```python
 #! /usr/bin/python3
 
-import freeling
+import pyfreeling
 import sys
 
 
@@ -10,7 +10,7 @@ import sys
 ## ----------------------------------------------
 
 # set locale to an UTF8 compatible locale 
-freeling.util_init_locale("default");
+pyfreeling.util_init_locale("default");
 
 # get installation path to use from arg2, or use /usr/local if not provided
 ipath = "/usr/local";
@@ -20,7 +20,7 @@ if len(sys.argv)>1 : ipath=sys.argv[1]
 cpath = ipath + "/share/freeling/common/"
 
 # creates a language identifier with the default config file
-di = freeling.lang_ident(cpath+"lang_ident/ident.dat")
+di = pyfreeling.lang_ident(cpath+"lang_ident/ident.dat")
   
 #list of languages to consider.  Empty -> all known languages
 candidates = []
