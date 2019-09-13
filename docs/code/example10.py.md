@@ -34,7 +34,7 @@ while (line!="") :
     # The funcion identify_language will return the code for the best language, 
     # or "none" if no language model yields a small enough perplexity (according
     # to the threshold set in that language model)
-    best_l = di.identify_language (line, [])
+    best_l = di.identify_language (line)
     print ("Best language:", best_l)
 
     # You can also get a sorted list of increasing perplexity,
