@@ -1,0 +1,11 @@
+site_name: FreeLing Tutorial
+copyright: TALP Research Center - Universitat Politècnica de Catalunya
+nav:
+    - Home: index.md
+    - Index: toc.md
+
+markdown_extensions:
+    - toc:
+        permalink: 
+        baselevel: 2
+        
