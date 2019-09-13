@@ -73,8 +73,8 @@ The result of the identifier is ranked by perplexity, which is a common informat
 ### Code
 
 Find here the whole code:
-  - In [C++](code/example10.cc.md)
-  - In [python](code/example10.py.md)
+    - In [C++](code/example10.cc.md)
+    - In [python](code/example10.py.md)
 
 
 ### Example

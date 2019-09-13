@@ -98,6 +98,6 @@ Then, we just need to analyze and process the sentence (if any) as usual.
 ### Code
 
 Find here the whole code:
-  - In [C++](code/example08.cc.md)
-  - In [python](code/example08.py.md)
+    - In [C++](code/example08.cc.md)
+    - In [python](code/example08.py.md)
 

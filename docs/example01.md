@@ -155,8 +155,8 @@ void ProcessSentences(const list<freeling::sentence> &ls) {
 
 Find here the whole code:
 
-* In [C++](code/example01.cc.md)
-* In [python](code/example01.py.md)
+    * In [C++](code/example01.cc.md)
+    * In [python](code/example01.py.md)
 
 ### Example
 

@@ -151,8 +151,8 @@ for (list<freeling::sentence>::iterator s=ls.begin(); s!=ls.end(); s++) {
 ### Code
 
 Find here the whole code:
-  - In [C++](code/example12.cc.md)
-  - In [python](code/example12.py.md)
+    - In [C++](code/example12.cc.md)
+    - In [python](code/example12.py.md)
 
 
 ### Example
