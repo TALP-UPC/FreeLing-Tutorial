@@ -14,3 +14,9 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+# MacOS
+.DS_Store
+
+# prevent readthedocs errors
+site
