@@ -1,6 +1,5 @@
 # Table of Contents
 
-* [About this tutorial](README.md)
 * [Preliminaries](preliminaries.md)
 * Examples
     * [The Basics: Morphology and PoS Tagging](basics.md)
