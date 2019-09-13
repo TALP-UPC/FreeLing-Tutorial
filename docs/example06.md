@@ -65,8 +65,8 @@ ProcessSentences(ls, sdb);
 ### Code
 
 Find here the whole code:
-    - In [C++](code/example06.cc.md)
-    - In [python](code/example06.py.md)
+* In [C++](code/example06.cc.md)
+* In [python](code/example06.py.md)
 
 
 ### Example

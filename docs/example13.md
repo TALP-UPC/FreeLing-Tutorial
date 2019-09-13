@@ -60,8 +60,8 @@ with that, we can convert any corpus in the right format to a new tagset.
 ### Code
 
 Find here the whole code:
-    - In [C++](code/example13.cc.md)
-    - In [python](code/example13.py.md)
+* In [C++](code/example13.cc.md)
+* In [python](code/example13.py.md)
 
 
 ### Example

@@ -59,8 +59,8 @@ void ProcessSentences(list<freeling::sentence> &ls, const wstring &fname) {
 ### Code
 
 Find here the whole code:
-    - In [C++](code/example14.cc.md)
-    - In [python](code/example14.py.md)
+* In [C++](code/example14.cc.md)
+* In [python](code/example14.py.md)
 
 
 ### Example

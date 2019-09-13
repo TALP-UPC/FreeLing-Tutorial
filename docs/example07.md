@@ -78,8 +78,8 @@ void ProcessSentences(const list<freeling::sentence> &ls, const freeling::semant
 ### Code
 
 Find here the whole code:
-    - In [C++](code/example07.cc.md)
-    - In [python](code/example07.py.md)
+* In [C++](code/example07.cc.md)
+* In [python](code/example07.py.md)
 
 
 ### Example
