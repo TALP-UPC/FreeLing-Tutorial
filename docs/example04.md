@@ -72,6 +72,7 @@ void extract_lemma_and_sense(const freeling::word &w, wstring &lem, wstring &sen
 ### Code
 
 Find here the whole code:
+
 * In [C++](code/example04.cc.md)
 * In [python](code/example04.py.md)
 
